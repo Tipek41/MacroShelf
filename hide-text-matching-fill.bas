@@ -80,8 +80,7 @@ Public Sub MetniArkaPlanRengineGoreGizle()
             backup.Cells(lastBackupRow, 1).Value2 = ws.CodeName
             backup.Cells(lastBackupRow, 2).Value2 = cell.Address(False, False)
             backup.Cells(lastBackupRow, 3).Value2 = cell.Font.Color
-            backup.Cells(lastBackupRow, 4).Value2 = cell.Font.TintAndShade
-            seen(key) = True
+                seen(key) = True
         End If
         cell.Font.Color = cell.DisplayFormat.Interior.Color
         cell.Font.TintAndShade = 0
@@ -158,7 +157,6 @@ Public Sub RestoreOriginalFontColors()
         If Not ws Is Nothing Then
             With ws.Range(addressText).Font
                 .Color = CLng(backup.Cells(i, 3).Value2)
-                .TintAndShade = CDbl(backup.Cells(i, 4).Value2)
             End With
             restoredCount = restoredCount + 1
         End If
@@ -206,7 +204,6 @@ Private Function GetOrCreateBackupSheet(ByVal wb As Workbook) As Worksheet
     backup.Cells(1, 1).Value2 = BACKUP_MARKER
     backup.Cells(1, 2).Value2 = "Address"
     backup.Cells(1, 3).Value2 = "FontColor"
-    backup.Cells(1, 4).Value2 = "TintAndShade"
     backup.Visible = xlSheetVeryHidden
     Set GetOrCreateBackupSheet = backup
 End Function
