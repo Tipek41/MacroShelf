@@ -30,11 +30,19 @@ Clear formatting beyond the last value or formula on the active worksheet. Formu
 - **Important:** Make a copy of the workbook before running it. The macro changes formatting, which Excel may not be able to undo.
 - If Excel still reports an inflated used range, save and reopen the workbook.
 
+#### 3. Match text color to the cell fill
+
+Change the font color in selected non-empty cells to match each cell's displayed fill color. The same module includes `RestoreOriginalFontColors`, which restores the saved font colors.
+
+- [Download the VBA module](hide-text-matching-fill.bas)
+- This is visual concealment only, not security. Cell contents remain accessible.
+- A very-hidden worksheet in the workbook stores the restoration data.
+
 ### Install and run
 
 1. In Excel, press **Alt+F11** to open the VBA editor.
 2. Choose **File → Import File…** and select the `.bas` module for the macro you want.
-3. Press **Alt+F8**, select the macro, and run it. PDF merging asks you to choose a folder; format cleanup works on the active worksheet.
+3. Press **Alt+F8**, select the macro, and run it. PDF merging asks for a folder; the format and text-color tools work on the active worksheet or selection.
 
 ### Website
 
@@ -66,11 +74,19 @@ Aktif çalışma sayfasındaki son değer veya formül hücresinin dışındaki 
 - **Önemli:** Çalıştırmadan önce çalışma kitabının bir kopyasını alın. Biçim değişiklikleri Excel’de geri alınamayabilir.
 - Excel kullanılan alanı hâlâ geniş gösteriyorsa dosyayı kaydedip kapatın ve yeniden açın.
 
+#### 3. Yazı rengini hücre dolgusuyla eşleştir
+
+Seçili ve boş olmayan hücrelerde yazı rengini ekranda görünen dolgu rengiyle eşleştirir. Aynı modüldeki `RestoreOriginalFontColors` makrosu kaydedilmiş özgün yazı renklerini geri yükler.
+
+- [VBA modülünü indir](hide-text-matching-fill.bas)
+- Bu yalnızca görsel gizlemedir, güvenlik sağlamaz. Hücre içerikleri erişilebilir durumda kalır.
+- Geri yükleme bilgileri çalışma kitabındaki çok gizli bir sayfada saklanır.
+
 ### Kurulum ve çalıştırma
 
 1. Excel’de **Alt+F11** tuşlarına basarak VBA düzenleyicisini açın.
 2. **File → Import File…** seçeneğinden kullanmak istediğiniz makronun `.bas` dosyasını içe aktarın.
-3. **Alt+F8** tuşlarına basıp makroyu seçerek çalıştırın. PDF birleştirme klasör seçtirir; biçim temizleme aktif çalışma sayfasında çalışır.
+3. **Alt+F8** tuşlarına basıp makroyu seçerek çalıştırın. PDF birleştirme klasör seçtirir; biçim ve yazı rengi araçları aktif sayfa veya seçim üzerinde çalışır.
 
 ### Web sitesi
 
