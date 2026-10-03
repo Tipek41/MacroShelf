@@ -38,6 +38,15 @@ Change the font color in selected non-empty cells to match each cell's displayed
 - This is visual concealment only, not security. Cell contents remain accessible.
 - A very-hidden worksheet in the workbook stores the restoration data.
 
+#### 4. Copy folders from cell links
+
+Select hyperlink cells in Excel, then choose a destination folder. Run `LinkliKlasorleriKopyala` to copy the linked folders with all their files and subfolders. Source folders stay unchanged. Existing destination names receive `_2`, `_3` suffixes; duplicate source links are skipped.
+
+- [Download the VBA module](copy-linked-folders.bas)
+- **Requirements:** Excel for Windows and access to the source folders (company network or VPN when needed).
+- Choose a separate local destination folder. Copy errors are reported; a failed copy may leave an incomplete destination folder.
+- Supports folder hyperlinks, simple `HYPERLINK` formulas, and folder paths in cells.
+
 ### Install and run
 
 1. In Excel, press **Alt+F11** to open the VBA editor.
@@ -81,6 +90,15 @@ Seçili ve boş olmayan hücrelerde yazı rengini ekranda görünen dolgu rengiy
 - [VBA modülünü indir](hide-text-matching-fill.bas)
 - Bu yalnızca görsel gizlemedir, güvenlik sağlamaz. Hücre içerikleri erişilebilir durumda kalır.
 - Geri yükleme bilgileri çalışma kitabındaki çok gizli bir sayfada saklanır.
+
+#### 4. Linklerdeki klasörleri kopyala
+
+Excel’de bağlantı hücrelerini seçin, ardından hedef klasörü belirleyin. `LinkliKlasorleriKopyala` makrosu bağlı klasörleri tüm dosya ve alt klasörleriyle kopyalar. Kaynak klasörler değiştirilmez. Hedefte aynı isim varsa `_2`, `_3` eklenir; aynı kaynağa giden tekrar bağlantılar atlanır.
+
+- [VBA modülünü indir](copy-linked-folders.bas)
+- **Gereksinimler:** Windows için Excel ve kaynak klasörlere erişim (gerektiğinde şirket ağı veya VPN).
+- Hedef olarak bilgisayarınızda ayrı bir klasör seçin. Kopyalama hataları bildirilir; başarısız kopyalar hedefte eksik kalabilir.
+- Klasör hyperlinklerini, basit `HYPERLINK` formüllerini ve hücrelerdeki klasör yollarını destekler.
 
 ### Kurulum ve çalıştırma
 
