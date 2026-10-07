@@ -131,6 +131,7 @@ Private Function KlasorLinkiniOku(ByVal hucre As Range) As String
         yol = hucre.Hyperlinks(1).Address
     End If
 
+    'HYPERLINK formulundeki ilk argumani oku
     If Len(yol) = 0 And hucre.HasFormula Then
         Set re = CreateObject("VBScript.RegExp")
         re.Pattern = "^\s*=\s*HYPERLINK\s*\(\s*(""([^""]|"""")*""|[^,;]+)"
@@ -142,6 +143,7 @@ Private Function KlasorLinkiniOku(ByVal hucre As Range) As String
         End If
     End If
 
+    'Hucrede dogrudan yol varsa
     If Len(yol) = 0 And Not IsError(hucre.Value2) Then
         yol = CStr(hucre.Value2)
     End If
