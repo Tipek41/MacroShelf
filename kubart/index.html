@@ -6,7 +6,7 @@
   <title>KubArt</title>
   <meta name="description" content="KubArt ile görsellerinizi istediğiniz tablo ölçüsüne göre A4 sayfalara bölün, önizleyin ve PDF olarak yazdırın.">
   <meta name="application-name" content="KubArt">
-  <meta name="theme-color" content="#0071e3">
+  <meta name="theme-color" content="#060e19">
   <link rel="canonical" href="https://tolgaipek.com.tr/kubart/">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <meta property="og:type" content="website">
@@ -24,7 +24,30 @@
     @media(max-width:950px){.workspace{grid-template-columns:1fr}.preview-card{position:static}.hero{padding-top:48px}.preview-stage{min-height:370px}}
     @media(max-width:600px){.topbar{padding:0 17px}.hero{padding:48px 18px 38px}.hero h1{font-size:44px}.content{padding:34px 12px 60px}.settings{padding:21px}.preview-top{padding:22px}.metric{padding:12px 8px}.metric-value{font-size:15px}.preview-stage{padding:18px;min-height:340px}.actions{grid-template-columns:1fr}.btn-plain{grid-column:auto}}
     @media print{body{background:#fff!important;margin:0!important}.topbar,.hero,.content,.footer,.modal{display:none!important}#print-mount,#print-mount *{visibility:visible!important}#print-mount{position:absolute;left:0;top:0;width:100%}.page-sheet{width:210mm;height:297mm;page-break-after:always;display:flex;align-items:center;justify-content:center;margin:0;padding:0}.page-sheet canvas{width:210mm;height:297mm;display:block}@page{size:A4 portrait;margin:0}}
-  </style>
+  
+    /* MacroShelf-inspired midnight blue theme; flat background, no homepage imagery */
+    :root{color-scheme:dark;--blue:#139cff;--blue2:#54b7ff;--ink:#f2f6ff;--sub:#acbdd1;--line:#2a3e56;--soft:#091829;--warn:#ffcb7b;--warnbg:#382d1b;--ok:#79dcb0}
+    html,body{background:#060e19;color:var(--ink)}
+    body{background:#060e19}
+    .topbar{background:#07111e;border-bottom:1px solid #2a3e56;color:#f2f6ff}
+    .version{background:#102d4a;color:#8dd4ff}
+    .hero{background:#060e19;color:#f2f6ff}
+    .hero .eyebrow{color:#54b7ff}
+    .hero h1 .tone{background:linear-gradient(95deg,#54b7ff,#a3d9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .content{background:#060e19}
+    .card,.modal-box{background:#0c1d30;border:1px solid #2a3e56;box-shadow:0 8px 28px #0002;color:#f2f6ff}
+    .card-tag,.group-title span,.card-lead,.field label,.modal-box p,.modal-actions span{color:#acbdd1}
+    .upload-zone{background:#10253b;border-color:#315676;color:#f2f6ff}
+    .upload-zone.drag,.upload-zone:hover,.upload-zone:focus-within{background:#12314e;border-color:#139cff}
+    .upload-icon{background:#163d60;color:#8dd4ff}
+    .divider{background:#2a3e56}
+    input,select,textarea{background:#10253b;color:#f2f6ff;border-color:#31506c;color-scheme:dark}
+    input::placeholder,textarea::placeholder{color:#92a8c0}
+    .modal-actions button{background:#10253b;border-color:#31506c;color:#f2f6ff}
+    .modal-actions button:hover{background:#173a59}
+    .footer{background:#060e19;color:#acbdd1}
+    @media print{html,body{background:#fff!important;color:#000!important}}
+</style>
 </head>
 <body>
   <nav class="topbar"><div class="logo">KubArt</div><div style="display:flex;align-items:center;gap:10px"><button id="langToggle" type="button" aria-label="Switch language" style="border:1px solid #d9d9de;background:#fff;border-radius:18px;padding:7px 11px;color:#1d1d1f;font-size:12px;font-weight:700;cursor:pointer">EN</button></div></nav>
