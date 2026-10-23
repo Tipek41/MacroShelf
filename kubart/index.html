@@ -97,10 +97,24 @@
     @media(max-width:600px){.hero{padding:32px 20px 24px}.hero h1{font-size:36px}.hero .desc{font-size:16px}.content{padding:12px 12px 40px}.settings{padding:22px}.preview-top{padding:22px;flex-wrap:wrap}.preview-stage{padding:18px}.metric{padding:14px 10px}.metric-value{font-size:16px}.metric-label{font-size:10px}.group-title{flex-wrap:wrap;gap:4px}.actions{grid-template-columns:1fr}.stage-label{font-size:11px}.card h2{font-size:26px}}
     @media print{#print-mount{display:block}.page-sheet{break-after:page}}
 
-</style>
+
+    /* Shared site navigation, matching PDF Atölyesi. */
+    .topbar{height:80px;padding:0;position:relative}
+    .site-nav{width:min(1320px,calc(100% - 88px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .site-nav a{text-decoration:none;color:inherit}
+    .site-brand{font-size:23px;letter-spacing:3px;font-weight:750;color:#8dd4ff!important;white-space:nowrap}
+    .site-links{display:flex;gap:30px;font-size:14px}.site-links a:hover{color:#54b7ff}
+    .site-actions{display:flex;align-items:center;gap:12px}
+    .site-back{border:1px solid #259eff;border-radius:10px;padding:8px 18px;display:inline-flex;align-items:center;white-space:nowrap;background:#0c223a88;font-size:14px}
+    .site-back:hover{border-color:#8dd4ff;background:#123557}
+    .site-nav a:focus-visible{outline:2px solid #70caff;outline-offset:4px}
+    @media(max-width:900px){.site-links{display:none}}
+    @media(max-width:600px){.topbar{padding:0}.site-nav{width:calc(100% - 28px);gap:10px}.site-brand{font-size:17px;letter-spacing:1px}.site-actions{gap:8px}.site-back{font-size:12px;padding:9px 10px}#langToggle{padding:8px 10px!important}}
+
+  </style>
 </head>
 <body>
-  <nav class="topbar"><div class="logo">KubArt</div><div style="display:flex;align-items:center;gap:10px"><button id="langToggle" type="button" aria-label="Switch language" style="border:1px solid #d9d9de;background:#fff;border-radius:18px;padding:7px 11px;color:#1d1d1f;font-size:12px;font-weight:700;cursor:pointer">EN</button></div></nav>
+  <nav class="topbar" aria-label="Site menüsü"><div class="site-nav"><a class="site-brand" href="../">TOLGA İPEK</a><div class="site-links"><a href="../#tools">Araçlar</a><a href="../#projects">Projeler</a><a href="../#about">Hakkımda</a></div><div class="site-actions"><a class="site-back" href="../">← Ana sayfaya dön</a><button id="langToggle" type="button" aria-label="Switch language" style="border:1px solid #d9d9de;background:#fff;border-radius:18px;padding:7px 11px;color:#1d1d1f;font-size:12px;font-weight:700;cursor:pointer">EN</button></div></div></nav>
   <header class="hero"><p class="eyebrow">Ölçü kontrollü A4 şablon</p><h1>Tuvaline tam uyan<br><span class="tone">hatasız bir çıktı.</span></h1><p class="desc">Görsel oranını kontrol eder, gerekirse kırpar ve yazıcı kalibrasyonuna göre gerçek ölçülü A4 PDF hazırlar.</p></header>
   <main class="content"><div class="content-inner"><div class="workspace">
     <section class="card settings">
