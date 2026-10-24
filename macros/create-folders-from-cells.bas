@@ -69,7 +69,7 @@ NextCell:
 
 SkipCell:
     skipped = skipped + 1
-    Resume NextCell
+    GoTo NextCell
 
 CellError:
     failed = failed + 1
