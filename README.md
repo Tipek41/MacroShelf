@@ -1,10 +1,58 @@
+# Tolga İpek · Portfolio
+
+[Canlı web sitesi](https://tolgaipek.com.tr)
+
+Kişisel portföy, web araçları ve Excel makroları için ana kaynak deposu
+
+## Proje yapısı
+
+| Konum | İçerik |
+| --- | --- |
+| `index.html` | Portföy ana sayfası, Araçlar ve Projeler, Makrolar |
+| `pdf-atolyesi.html` | PDF Atölyesi |
+| `veri-donusturucu/` | Veri Dönüştürücü |
+| `gorsel-boyutlandirici/` | Görsel Boyutlandırıcı |
+| `kubart/` | KubArt |
+| `*.bas` | İndirilebilir Excel VBA modülleri |
+| `CNAME` | Mevcut özel alan adı |
+
+Bu depo web sitesinin ana kaynağıdır. Araçlara ana sayfadaki kartlardan aynı alan adı altında erişilir. Önceden oluşturulmuş ayrı araç depoları geçmiş çalışmalar olarak korunur; bu sitenin yayın içeriği burada yönetilir.
+
+## Yerelde çalıştırma
+
+Depoyu indirdikten sonra kök klasörde:
+
+```sh
+python3 -m http.server 8000
+```
+
+Tarayıcıda http://localhost:8000 adresini açın. Kökten başlayan bağlantılar nedeniyle tüm depoyu birlikte sunun.
+
+## Yayın ve ileride sunucuya taşıma
+
+Şu anda GitHub Pages, `main` dalından yayın yapar ve özel alan adı `tolgaipek.com.tr` olarak kalır.
+
+Site statik HTML, CSS ve JavaScript dosyalarından oluşur. Başka bir sunucuya taşırken:
+
+1. Bu deponun yayın dosyalarını, alt klasörleri ve görsel dosyalarını birlikte web köküne kopyalayın
+2. `index.html` dosyasını varsayılan giriş belgesi olarak ayarlayın
+3. PDF Atölyesi, Veri Dönüştürücü, Görsel Boyutlandırıcı ve KubArt adreslerini kontrol edin
+4. HTTPS sertifikasını hazırladıktan sonra alan adının DNS kayıtlarını yeni sunucuya yönlendirin
+5. Dosya indirme ve makro indirme işlevlerini kontrol edin
+
+PDF ve veri araçlarının kullandığı dış kütüphane adreslerini taşıma sırasında ayrıca kontrol edin. Sunucu değişikliği ve DNS taşıması henüz yapılmadı.
+
+---
+
+## Excel makroları kullanım rehberi
+
 <div align="right">
 
 [English](#english) · [Türkçe](#türkçe)
 
 </div>
 
-# MacroShelf
+# Excel VBA makroları
 
 <a id="english"></a>
 
@@ -55,7 +103,7 @@ Select hyperlink cells in Excel, then choose a destination folder. Run `LinkliKl
 
 ### Website
 
-The bilingual MacroShelf page: [tipek41.github.io/MacroShelf](https://tipek41.github.io/MacroShelf/).
+The portfolio website: [tolgaipek.com.tr](https://tolgaipek.com.tr/).
 
 ---
 
@@ -108,7 +156,7 @@ Excel’de bağlantı hücrelerini seçin, ardından hedef klasörü belirleyin.
 
 ### Web sitesi
 
-İki dilli MacroShelf sayfası: [tipek41.github.io/MacroShelf](https://tipek41.github.io/MacroShelf/)
+Portföy web sitesi: [tolgaipek.com.tr](https://tolgaipek.com.tr/)
 
 ---
 
