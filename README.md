@@ -18,32 +18,6 @@ Kişisel portföy, web araçları ve Excel makroları için ana kaynak deposu
 
 Bu depo web sitesinin ana kaynağıdır. Araçlara ana sayfadaki kartlardan aynı alan adı altında erişilir. Önceden oluşturulmuş ayrı araç depoları geçmiş çalışmalar olarak korunur; bu sitenin yayın içeriği burada yönetilir.
 
-## Yerelde çalıştırma
-
-Depoyu indirdikten sonra kök klasörde:
-
-```sh
-python3 -m http.server 8000
-```
-
-Tarayıcıda http://localhost:8000 adresini açın. Kökten başlayan bağlantılar nedeniyle tüm depoyu birlikte sunun.
-
-## Yayın ve ileride sunucuya taşıma
-
-Şu anda GitHub Pages, `main` dalından yayın yapar ve özel alan adı `tolgaipek.com.tr` olarak kalır.
-
-Site statik HTML, CSS ve JavaScript dosyalarından oluşur. Başka bir sunucuya taşırken:
-
-1. Bu deponun yayın dosyalarını, alt klasörleri ve görsel dosyalarını birlikte web köküne kopyalayın
-2. `index.html` dosyasını varsayılan giriş belgesi olarak ayarlayın
-3. PDF Atölyesi, Veri Dönüştürücü, Görsel Boyutlandırıcı ve KubArt adreslerini kontrol edin
-4. HTTPS sertifikasını hazırladıktan sonra alan adının DNS kayıtlarını yeni sunucuya yönlendirin
-5. Dosya indirme ve makro indirme işlevlerini kontrol edin
-
-PDF ve veri araçlarının kullandığı dış kütüphane adreslerini taşıma sırasında ayrıca kontrol edin. Sunucu değişikliği ve DNS taşıması henüz yapılmadı.
-
----
-
 ## Excel makroları kullanım rehberi
 
 <div align="right">
